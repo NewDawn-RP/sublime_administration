@@ -14,10 +14,10 @@ _Admin.Prefix = "NewDawn-Administration";
 
 
 _Admin.Logs = {
-    WebHook = "";
+    WebHook = "https://discord.com/api/webhooks/1041472735269888140/N9XClBYRIYjVYpoDR6j8Q_8I8NctU_c9toBFNOlhTAOQL6J6A6h5AU6_zrFnI-jno-7f";
     BotName = "NewDawn-Logs";
     Color = 3092790;
-    IconURL = "https://zupimages.net/up/21/48/fy8g.png"; 
+    IconURL = "https://cdn.discordapp.com/attachments/1092062637363310603/1114618975192613014/PNG_Logo_ND_BleuMarine.png"; 
 }
 
 
@@ -37,7 +37,7 @@ _Admin.Config = {
     SQL_Wrapper = "oxmysql", --> mysql or oxmysql -- IMPORTANT (change in fxmanifest your dependencies)
     --
     Macro = {
-        ['Open Main Menu'] = {btn = 'F10', description = "~r~Open Admin Panel~s~"}, --> Open panel
+        ['Open Main Menu'] = {btn = 'F10', description = "~r~Ouvrir Menu Admin~s~"}, --> Open panel
         ['No Clip Toggle'] = {btn = 'F3', description = "No Clip"}, --> No clip
     },
     --
