@@ -6,8 +6,8 @@ ESX.RegisterServerCallback(_Admin.Prefix.."OwnerPermissions", function(source, c
 end)
 
 function _Admin.CheckOwnerPermissions(xPlayer)
-    for _,v in ipairs(_Admin.MainUser) do
-        if v == xPlayer.identifier then
+    for id, value in pairs(_Admin.MainUser) do
+        if id == xPlayer.identifier then
             return true
         else
             return false

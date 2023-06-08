@@ -57,7 +57,10 @@ AddEventHandler(_Admin.Prefix.."GiveItem", function(rank, label, name, qty)
 	local _src = source
 	local playerGroup = false
 	local xPlayer = ESX.GetPlayerFromId(_src)
-
+    if not xPlayer then
+        print("Joueur introuvable pour le Give d'Item")
+        return 
+    end
 
     if rank.name == "Owner" then
         local checkPerms = _Admin.CheckOwnerPermissions(xPlayer)
@@ -66,6 +69,7 @@ AddEventHandler(_Admin.Prefix.."GiveItem", function(rank, label, name, qty)
             xPlayer.addInventoryItem(name, qty)
         end
     else
+        print(xPlayer.getName() .. " else")
         local checkPerms, result = _Admin.CheckStaffPermissions(xPlayer)
         if checkPerms then
             _Admin.Print("[^1"..rank.name.." ^7- ^2"..xPlayer.getName().."^7] Goto → [^5".. qty .. "" .. label .."^7]")
@@ -78,21 +82,23 @@ end)
 
 
 RegisterServerEvent(_Admin.Prefix.."GiveWeapon")
-AddEventHandler(_Admin.Prefix.."GiveWeapon", function(rank, weapon, ammo)
+AddEventHandler(_Admin.Prefix.."GiveWeapon", function(rank, weapon, count)
 	local _src = source
 	local playerGroup = false
 	local xPlayer = ESX.GetPlayerFromId(_src)
     if rank.name == "Owner" then
         local checkPerms = _Admin.CheckOwnerPermissions(xPlayer)
         if checkPerms then
-            _Admin.Print("[^1"..rank.name.." ^7- ^2"..xPlayer.getName().."^7] Give → [^5".. weapon .." x" .. ammo .." ammo^7]")
-            xPlayer.addWeapon(weapon, ammo)
+            _Admin.Print("[^1"..rank.name.." ^7- ^2"..xPlayer.getName().."^7] Give → [^5".. weapon .." x" .. count .." munitions^7]")
+            xPlayer.addInventoryItem(weapon, 1)
+            xPlayer.addInventoryItem(_Admin.Weapon.List[weapon].ammoname , count)
         end
     else
         local checkPerms, result = _Admin.CheckStaffPermissions(xPlayer)
         if checkPerms then
-            _Admin.Print("[^1"..rank.name.." ^7- ^2"..xPlayer.getName().."^7] Give → [^5".. weapon .." x" .. ammo .." ammo^7]")
-            xPlayer.addWeapon(weapon, ammo)
+            _Admin.Print("[^1"..rank.name.." ^7- ^2"..xPlayer.getName().."^7] Give → [^5".. weapon .." x" .. count .." munitions^7]")
+            xPlayer.addInventoryItem(weapon, 1)
+            xPlayer.addInventoryItem(_Admin.Weapon.List[weapon].ammoname , count)
         end
     end
 end)
@@ -132,6 +138,7 @@ AddEventHandler(_Admin.Prefix.."RemoveAllWeapon", function(rank)
 	local xPlayer = ESX.GetPlayerFromId(_src)
     if rank.name == "Owner" then
         local checkPerms = _Admin.CheckOwnerPermissions(xPlayer)
+        print(checkPerms)
         if checkPerms then
             _Admin.Print("[^1"..rank.name.." ^7- ^2"..xPlayer.getName().."^7] Remove → [^5ALL WEAPONS^7]")
             for k,v in pairs(xPlayer.getLoadout()) do
