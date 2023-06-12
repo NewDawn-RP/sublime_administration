@@ -212,7 +212,6 @@ end
 _Admin.jSelected = {}
 function _Admin.Panel:PlayerDetailsJobs1(Jobs) -- LIST JOB
     _Admin.jSelected = nil or {}
-    print(json.encode(Jobs))
     for k,v in pairs(Jobs)do
         RageUI.Button(v.label,nil, {RightLabel = "~c~→→→"}, true, {
             onSelected = function()

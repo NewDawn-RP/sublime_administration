@@ -115,7 +115,7 @@ end
 
 
 CreateThread(function() --> spécial précharge pour Admin les Callback lourd 1x à la connection
-    Wait(500)
+    Wait(5000)
     ESX.TriggerServerCallback(_Admin.Prefix.."OwnerPermissions", function(bool) 
         if bool then
             local rank = { name = "Owner", grade = "Owner" }
