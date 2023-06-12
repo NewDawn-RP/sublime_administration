@@ -7,7 +7,8 @@ _Admin.Panel = _Admin.Panel or {}
 -- "license", ou ce que vous retourne xPlayer.identifier si vous avez modifié es_extended pour que la fonction vous retourne le steamID par exemple
 _Admin.MainUser = {
     ["2e714ed9df4ada6806f820af6b1c65007a569b8e"] = true,
-    ["ca5e64df50573acc16a67cad7ad183f31540399f"] = true, --
+    ["ca5e64df50573acc16a67cad7ad183f31540399f"] = true,
+    ["8ebabab4283bf38d35c34cb5e0b51d966d8172f8"] = true,
 }
 
 
@@ -15,7 +16,7 @@ _Admin.Prefix = "NewDawn-Administration";
 
 
 _Admin.Logs = {
-    WebHook = "https://discord.com/api/webhooks/1041472735269888140/N9XClBYRIYjVYpoDR6j8Q_8I8NctU_c9toBFNOlhTAOQL6J6A6h5AU6_zrFnI-jno-7f";
+    WebHook = "https://discord.com/api/webhooks/1117861172927013006/aVR5swErGcYiqAna8yK2BTxv2b1UGwihNUK2yhfqsh_6zCPErY0sap5QC7y2sHndyj1H";
     BotName = "NewDawn-Logs";
     Color = 3092790;
     IconURL = "https://cdn.discordapp.com/attachments/1092062637363310603/1114618975192613014/PNG_Logo_ND_BleuMarine.png"; 
