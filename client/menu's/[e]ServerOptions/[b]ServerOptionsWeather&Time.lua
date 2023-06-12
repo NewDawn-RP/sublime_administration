@@ -26,7 +26,7 @@ function _Admin.Panel:ServerOptionsWeather(rank)
             if _.weatherIndex ~= 1 then
                 _Admin.Config.Weather.defaultWeather = _.weatherItem 
                 TriggerServerEvent(_Admin.Prefix.."NewWeatherFromAdminPanel", _Admin.Config.Weather.defaultWeather, _Admin.Config.Weather.blackout)
-                _Admin.Print("[^1".._.rank.name.." ^7- ^2"..GetPlayerName(PlayerId()).."^7] À modifier la météo → ^6".._Admin.Config.Weather.defaultWeather.." ^7")
+                _Admin.Print("[^1".._.rank.name.." ^7- ^2"..GetPlayerName(PlayerId()).."^7] A modifié la météo → ^6".._Admin.Config.Weather.defaultWeather.." ^7")
                 Visual.Subtitle("~c~Changement météo en cours...", 2500)
             end 
         end 
@@ -39,7 +39,7 @@ function _Admin.Panel:ServerOptionsWeather(rank)
         end, 
         onSelected = function(Index, Item) 
             TriggerServerEvent(_Admin.Prefix.."NewTimeFromAdminPanel",  _.timeIndex)
-            _Admin.Print("[^1".._.rank.name.." ^7- ^2"..GetPlayerName(PlayerId()).."^7] À modifier le temps → ^6"..Index..":00 ^7")
+            _Admin.Print("[^1".._.rank.name.." ^7- ^2"..GetPlayerName(PlayerId()).."^7] A modifié le temps → ^6"..Index..":00 ^7")
             Visual.Subtitle("~c~Changement temps en cours...", 2500) 
         end 
     })

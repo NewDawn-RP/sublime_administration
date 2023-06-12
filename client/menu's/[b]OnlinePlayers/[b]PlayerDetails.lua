@@ -8,7 +8,7 @@ local _ = {
     listRank = {},
     isShearch = false,
     listAccountIndex = 1,
-    listAccount = {'Donnez', 'Retirez', 'Videz'},
+    listAccount = {'Donner', 'Retirer', 'Vider'},
     checkboxVeh = false,
     shearchCar = nil,
     findVehicle = nil,
@@ -212,6 +212,7 @@ end
 _Admin.jSelected = {}
 function _Admin.Panel:PlayerDetailsJobs1(Jobs) -- LIST JOB
     _Admin.jSelected = nil or {}
+    print(json.encode(Jobs))
     for k,v in pairs(Jobs)do
         RageUI.Button(v.label,nil, {RightLabel = "~c~→→→"}, true, {
             onSelected = function()
@@ -531,7 +532,7 @@ function _Admin.Panel:PlayerDetailsVehicle1(rank, vehicleList)
         });
     end
     if (plateSelected ~= nil) then
-        RageUI.Button('Donnez le véhicule', 'Donnez le véhicule au joueur (il faut etre dedans)', {RightLabel = plateSelected, RightBadge = RageUI.BadgeStyle.Tick}, true, {
+        RageUI.Button('Donner le véhicule', 'Donner le véhicule au joueur (il faut etre dedans)', {RightLabel = plateSelected, RightBadge = RageUI.BadgeStyle.Tick}, true, {
             onSelected = function()
                 ESX.Game.SetVehicleProperties(GetVehiclePedIsIn(PlayerPedId()), {
                     plate = plateSelected

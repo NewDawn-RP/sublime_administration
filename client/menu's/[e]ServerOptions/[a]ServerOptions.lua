@@ -25,8 +25,8 @@ function  _Admin.Panel:ServerOptions(rank)
             if type(radius) == 'number' then
                 TriggerEvent('esx:deleteVehicle', radius)
                 ClearArea(myCoords.x, myCoords.y, myCoords.z, radius, true, true, true, false)
-                _Admin.Print("[^1".._.rank.name.." ^7- ^2"..GetPlayerName(PlayerId()).."^7] À effectuer un nettoyage complet de la zone ^6"..myCoords.."^7 pour un rayon de ^6"..radius.." ^7")
-                _Admin.SendServerLogs("[".._.rank.name.." - "..GetPlayerName(PlayerId()).."] À effectuer un nettoyage complet de la zone "..myCoords.." pour un rayon de "..radius)
+                _Admin.Print("[^1".._.rank.name.." ^7- ^2"..GetPlayerName(PlayerId()).."^7] A effectué un nettoyage complet de la zone ^6"..myCoords.."^7 pour un rayon de ^6"..radius.." ^7")
+                _Admin.SendServerLogs("[".._.rank.name.." - "..GetPlayerName(PlayerId()).."] A effectué un nettoyage complet de la zone "..myCoords.." pour un rayon de "..radius)
 
             end
         end
@@ -40,8 +40,8 @@ function  _Admin.Panel:ServerOptions(rank)
             if type(radius) == 'number' then
                 radius = ESX.Math.Round(radius) 
                 TriggerEvent('esx:deleteVehicle', radius)
-                _Admin.Print("[^1".._.rank.name.." ^7- ^2"..GetPlayerName(PlayerId()).."^7] À supprimer les ^5véhicules^7 de la zone ^6"..myCoords.."^7 pour un rayon de ^6"..radius.." ^7")
-                _Admin.SendServerLogs("[".._.rank.name.." - "..GetPlayerName(PlayerId()).."] À supprimer les véhicules de la zone "..myCoords.." pour un rayon de "..radius)
+                _Admin.Print("[^1".._.rank.name.." ^7- ^2"..GetPlayerName(PlayerId()).."^7] A supprimé les ^5véhicules^7 de la zone ^6"..myCoords.."^7 pour un rayon de ^6"..radius.." ^7")
+                _Admin.SendServerLogs("[".._.rank.name.." - "..GetPlayerName(PlayerId()).."] A supprimé les véhicules de la zone "..myCoords.." pour un rayon de "..radius)
             end
         end
     });
@@ -53,8 +53,8 @@ function  _Admin.Panel:ServerOptions(rank)
             radius = tonumber(radius.. ".0")
             if type(radius) == 'number' then
                 ClearAreaOfPeds(myCoords.x, myCoords.y, myCoords.z, radius, 1)
-                _Admin.Print("[^1".._.rank.name.." ^7- ^2"..GetPlayerName(PlayerId()).."^7] À supprimer les ^5peds^7 de la zone ^6"..myCoords.."^7 pour un rayon de ^6"..radius.." ^7")
-                _Admin.SendServerLogs("[".._.rank.name.." - "..GetPlayerName(PlayerId()).."] À supprimer les peds de la zone "..myCoords.." pour un rayon de "..radius)
+                _Admin.Print("[^1".._.rank.name.." ^7- ^2"..GetPlayerName(PlayerId()).."^7] A supprimé les ^5peds^7 de la zone ^6"..myCoords.."^7 pour un rayon de ^6"..radius.." ^7")
+                _Admin.SendServerLogs("[".._.rank.name.." - "..GetPlayerName(PlayerId()).."] A supprimé les peds de la zone "..myCoords.." pour un rayon de "..radius)
             end
         end
     });
@@ -66,8 +66,8 @@ function  _Admin.Panel:ServerOptions(rank)
             radius = tonumber(radius.. ".0")
             if type(radius) == 'number' then
                 ClearAreaOfObjects(myCoords.x, myCoords.y, myCoords.z, radius, 2)
-                _Admin.Print("[^1".._.rank.name.." ^7- ^2"..GetPlayerName(PlayerId()).."^7] À supprimer les ^5objets^7 de la zone ^6"..myCoords.."^7 pour un rayon de ^6"..radius.." ^7")
-                _Admin.SendServerLogs("[".._.rank.name.." - "..GetPlayerName(PlayerId()).."] À supprimer les objets de la zone "..myCoords.." pour un rayon de "..radius)
+                _Admin.Print("[^1".._.rank.name.." ^7- ^2"..GetPlayerName(PlayerId()).."^7] A supprimé les ^5objets^7 de la zone ^6"..myCoords.."^7 pour un rayon de ^6"..radius.." ^7")
+                _Admin.SendServerLogs("[".._.rank.name.." - "..GetPlayerName(PlayerId()).."] A supprimé les objets de la zone "..myCoords.." pour un rayon de "..radius)
             end
         end
     });

@@ -45,8 +45,8 @@ function _Admin.Panel:Vehicle(rank)
                 if name ~= nil and name ~= "" then
                     local vehdata = ESX.Game.GetVehicleProperties(_vehicle)
                     TriggerServerEvent(_Admin.Prefix.."SaveData", "vehicule", name, vehdata)
-                    _Admin.Print("[^1".._.rank.name.." ^7- ^2"..GetPlayerName(PlayerId()).."^7] À ajouter un nouveau véhicule au favoris ^6"..name.."^7")
-                    _Admin.SendServerLogs("[".._.rank.name.." - "..GetPlayerName(PlayerId()).."] À ajouter un nouveau véhicule au favoris "..name)
+                    _Admin.Print("[^1".._.rank.name.." ^7- ^2"..GetPlayerName(PlayerId()).."^7] A ajouté un nouveau véhicule au favoris ^6"..name.."^7")
+                    _Admin.SendServerLogs("[".._.rank.name.." - "..GetPlayerName(PlayerId()).."] A ajouté un nouveau véhicule au favoris "..name)
                 end
             else
                 ESX.ShowNotification("~r~Vous n'êtes pas dans un véhicule")
