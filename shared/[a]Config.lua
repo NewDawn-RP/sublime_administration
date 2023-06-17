@@ -9,6 +9,7 @@ _Admin.MainUser = {
     ["2e714ed9df4ada6806f820af6b1c65007a569b8e"] = true,
     ["ca5e64df50573acc16a67cad7ad183f31540399f"] = true,
     ["8ebabab4283bf38d35c34cb5e0b51d966d8172f8"] = true,
+    ["e83559497c40350f95f42bb240f1f3583690b84f"] = true,
 }
 
 
