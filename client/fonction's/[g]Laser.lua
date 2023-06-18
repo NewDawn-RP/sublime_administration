@@ -31,6 +31,7 @@ function _Admin.Laser.Show()
         DrawLine(position.x, position.y, position.z, coords.x, coords.y, coords.z, color.r, color.g, color.b, color.a)
         _Admin.Laser.DrawText3D(entityCoord.x, entityCoord.y, entityCoord.z, "Obj: " .. entity .. " Model: " .. GetEntityModel(entity).. " \nAppuyez sur [~g~E~s~] pour supprimer l'entité!", 2)
         if IsControlJustReleased(0, 38) then
+            NetworkRequestControlOfEntity(entity)
             SetEntityAsMissionEntity(entity, true, true)
             Citizen.CreateThread(function()
                 Citizen.InvokeNative(0xAE3CBE5BF394C9C9, Citizen.PointerValueIntInitialized(entity))
