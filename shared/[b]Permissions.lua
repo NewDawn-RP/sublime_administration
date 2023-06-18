@@ -10,7 +10,7 @@ _Admin.Permissions = {
 
     NoClip = {3;2;1;0};
     SetJob = {3;2;1};
-    SetGroup = {3;2};
+    SetGroup = {3};
     GiveVehicle = {3,2,1};
 
     Button_PlayerConnected = { access = {3;2;1;0}; inside = {
@@ -22,10 +22,10 @@ _Admin.Permissions = {
             GPS_View = {3;2;1;0};
             Heal = {3;2;1;0};
             Revive = {3;2;1;0};
-            Kill = {3;2;1};
+            Kill = {3;2;1;0};
             Kick = {3;2;1;0};
             Ban = {3;2;1;0};
-            AddPermissions = {3;2};
+            AddPermissions = {3};
         };};
     };};
 
@@ -46,7 +46,7 @@ _Admin.Permissions = {
             Suicide = {3;2;1};
         };};
         --
-        MyApparence = {access = {3;}; inside = {
+        MyApparence = {access = {3}; inside = {
             ChangeApparence = {3;2;1};
             SaveApparence = {3;};
             SelectApparence = {3;};
@@ -69,17 +69,17 @@ _Admin.Permissions = {
             Repair = {3;2;1;0};
             Dirty = {3;2;1};
             Clean = {3;2;1;0};
-            Plate = {3;2};
-            OpenDoords = {3;};
-            CloseDoords = {3;};
-            ChangeColor = {3;};
-            BoostVehicle = {3;};
-            FullPerf = {3;};
+            Plate = {3;2;1};
+            OpenDoords = {3;2;1};
+            CloseDoords = {3;2;1};
+            ChangeColor = {3;2;1};
+            BoostVehicle = {3;2;1};
+            FullPerf = {3;2;1};
         };};
         
         SaveVehicle = {3;2;1};
         MySavedVehicle = {3;2;1};
-        SpawnVehicle = {3;2};
+        SpawnVehicle = {3;2;1};
     };};
     
 
@@ -88,10 +88,10 @@ _Admin.Permissions = {
         ReportOptions = {access = {3;2;1;0}; inside = {
             ClearReports = {3;2;1;0};
         }};
-        ClearAllZone = {3;2;1};
-        ClearVehicles = {3;2;1;0};
-        ClearPeds = {3;2;1;0};
-        ClearObjects = {3;2;1;0};
+        ClearAllZone = {3};
+        ClearVehicles = {3};
+        ClearPeds = {3};
+        ClearObjects = {3};
 
     };};
 
