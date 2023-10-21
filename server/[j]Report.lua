@@ -11,6 +11,8 @@ RegisterCommand("report", function(source, args, rawCommand)
 			message = args
 		})
 		xPlayer.showNotification("Report envoyé avec succès")
+		local logValue = ("||@here||  \n **Joueur: ** `%s` \n ```%s```"):format(GetPlayerName(source), table.concat(args, " "))
+		TriggerEvent("lexinor_commons:SendSimpleWebhookLog", "https://discord.com/api/webhooks/1165330205896867910/Kh0UbCOjgDkBmk_iUQeG2AlMgFd_POCCOfth8WlzrmxVs_hxyrDg_0rFQlAxp-AHM3s_", logValue, "Report Joueur")
 		_Admin.Print("[^1NEW REPPORT ^7- ^2"..GetPlayerName(source).."^7] Message : ^6".. table.concat(args, " ").."^7")
 	end
 end)
