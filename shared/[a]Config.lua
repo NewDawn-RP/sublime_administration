@@ -76,4 +76,13 @@ _Admin.Config = {
         maxRandom = 4,
     },
 
+    reportSelect = {
+        {value = "Bug", label = "Un bug"},
+        {value = "Demande de spec", label = "Demande de spec"},
+        {value = "Problème In-Game", label = "Problème rencontré"},
+        {value = "Autre", label = "Autre"},
+    },
+
+    reportAdvert = "Merci d'utiliser le /report uniquement pour des problèmes sérieux qui nécessitent l'intervention du staff. Les signalements abusifs seront sévèrement sanctionnés. Assurez-vous que votre requête est pertinente et nécessite une assistance immédiate!"
+
 }

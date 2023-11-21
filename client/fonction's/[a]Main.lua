@@ -294,3 +294,14 @@ function _Admin.GetOwnerVehiclePedIsInPlate(vehicle, plate)
         return false
     end
 end
+
+RegisterNetEvent("sublime_administration:reportMenu", function()
+    local input = lib.inputDialog('Report', {
+        {type = 'select', label = 'Raison:', options = _Admin.Config.reportSelect, required = true},
+        {type = 'textarea', label = 'Détails:', description = _Admin.Config.reportAdvert, icon = 'clipboard', required = true},
+        {type = 'checkbox', label = "Vous confirmez avoir bien lu et compris les conditions pour utiliser le /report", required = true},
+      })
+
+    if not input then return end
+    TriggerServerEvent("sublime_administration:sendreport", input[1], input[2])
+end)
